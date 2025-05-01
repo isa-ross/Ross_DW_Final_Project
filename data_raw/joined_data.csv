@@ -1,0 +1,49 @@
+Date,Site,Trap ID,Species,Notes,Distance to Vegetation (m),Type of Vegetation,Percent Veg Cover,Distance to Water (m),Native,Grouped_Veg
+2022-11-14,Heritage,4C,SIOC,NA,0,Typha,80,5,Y,sedge_typha
+2022-11-14,Heritage,4D,SIOC,NA,0,Typha,60,21,Y,sedge_typha
+2022-11-14,Heritage,4I,SIOC,NA,0,Buffelgrass,50,26,N,grass
+2022-11-14,Heritage,2H,REME,NA,0,Unknown grass,60,24,NA,grass
+2022-11-14,Heritage,2F,REME,NA,0,Cockleburr,30,23,Y,forb
+2022-11-15,Heritage,4C,SIOC,NA,0,Typha,80,5,Y,sedge_typha
+2022-11-15,Heritage,4H,SIOC,NA,0.5,Buffelgrass,30,32,N,grass
+2022-11-15,Heritage,1H,REME,Escaped,0,Typha,70,15,Y,sedge_typha
+2022-11-15,Heritage,1B,REME,NA,0,Bermuda grass,40,4,N,grass
+2022-11-15,Heritage,4I,SIOC,NA,0,Buffelgrass,50,26,N,grass
+2022-11-15,Heritage,1G,SIOC,NA,0.5,Typha,50,12,Y,sedge_typha
+2022-11-15,Heritage,1J,REME,Escaped,0,Typha,50,11,Y,sedge_typha
+2022-11-15,Heritage,1E,SIOC,NA,0.5,Tall flatsedge / Bermuda mix,30,10,Y,mixed
+2022-11-15,Heritage,3B,REME,NA,0,Typha,100,24,Y,sedge_typha
+2022-11-15,Heritage,1I,SIOC,NA,0,Typha,80,14,Y,sedge_typha
+2022-11-15,Heritage,3G,SIOC,juvi,0,Bermuda grass,30,28,N,grass
+2022-11-15,Heritage,2H,SIOC,juvi,0,Unknown grass,60,24,NA,grass
+2022-11-16,Heritage,1J,REME,NA,0,Typha,50,11,Y,sedge_typha
+2022-11-16,Heritage,1F,SIOC,likely recap of 1E ind. from 11/15,0,Smartweed/Typha mix,50,8,Y,mixed
+2022-11-16,Heritage,1E,SIOC,NA,0.5,Tall flatsedge / Bermuda mix,30,10,Y,mixed
+2022-11-16,Heritage,1H,SIOC,NA,0,Typha,70,15,Y,sedge_typha
+2022-11-16,Heritage,1I,SIOC,NA,0,Typha,80,14,Y,sedge_typha
+2022-11-16,Heritage,1D,SIOC,NA,0.25,Unknown grass,30,5,NA,grass
+2022-11-16,Heritage,2G,REME,NA,0.5,Unknown grass,20,20,NA,grass
+2022-11-16,Heritage,1C,REME,NA,0.5,Unknown grass,10,4,NA,grass
+2022-11-16,Heritage,4H,SIOC,Juvi may be same from yesterday,0.5,Buffelgrass,30,32,N,grass
+2022-11-16,Heritage,3H,REME,NA,0,Bermuda grass,90,30,N,grass
+2022-11-16,Heritage,4B,SIOC,NA,0,Umbrella flatsedge,80,1,N,sedge_typha
+2022-11-16,Heritage,4J,SIOC,NA,0,Bermuda grass,50,17,N,grass
+2022-11-16,Heritage,4E,SIOC,NA,0.5,Typha,40,34,Y,sedge_typha
+2022-11-16,Heritage,2A,SIOC,tail short- lost part of it,0,Bermuda grass,50,14,N,grass
+2022-11-16,Heritage,4C,SIOC,NA,0,Typha,80,5,Y,sedge_typha
+2022-11-16,Heritage,4I,SIOC,NA,0,Buffelgrass,50,26,N,grass
+2022-11-16,Heritage,4D,SIOC,Juvi?,0,Typha,60,21,Y,sedge_typha
+2022-11-16,Heritage,3C,SIOC,NA,0,Salt cedar / Typha,50,24,Y,mixed
+2022-11-16,Drexel,B7,CHPE,NA,2.5,Desert broom,0,1500,Y,shrubs
+2022-11-16,Drexel,B10,PEER,NA,2,Desert broom,0,1500,Y,shrubs
+2022-11-16,Drexel,D6,SIOC,NA,0,Bermuda grass,40,1500,N,grass
+2022-11-17,Drexel,A3,NEAB,Escaped,1,Desert broom,5,1500,Y,shrubs
+2022-11-17,Drexel,C2,DIME,4 toes,0.25,Bermuda grass,30,1500,N,grass
+2022-11-17,Drexel,C6,DIME,"4 toes, forepaw sore/injured? cheek ouched ripped open? looks like old wound, released without further handling",0.5,Cheeseweed burrobush,5,1500,Y,forb
+2022-11-17,Drexel,C9,CHPE,NA,0,Desert broom/Bermuda grass,80,1500,Y,mixed
+2022-11-17,Drexel,C10,PEER,Escaped,0,Desert broom,70,1500,Y,shrubs
+2022-11-18,Drexel,C5,DIME,4 toes,0,Desert broom,20,1500,Y,shrubs
+2022-11-18,Drexel,C7,CHPE,NA,0,Cheeseweed burrobush,30,1500,Y,forb
+2022-11-18,Drexel,C8,PEER,NA,0,Bermuda grass,60,1500,N,grass
+2022-11-18,Drexel,D10,PEER,NA,0,Unidentified aster/Bermuda grass,30,1500,N,mixed
+2022-11-18,Drexel,C10,PEER,NA,0,Desert broom,70,1500,Y,shrubs

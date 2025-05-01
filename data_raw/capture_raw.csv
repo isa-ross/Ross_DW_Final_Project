@@ -1,0 +1,52 @@
+Date,Site,Trap ID,Species,Status (R/N),Sex,Total Weight,Bag weight,Animal Weight,Hind foot length,Tail length,Hair sample (Y/N),Position (R/L),Handler,Notes
+2022-11-14,Heritage,4C,SIOC,N,F,134,18,116,2.8,11,Y,L,ADB,NA
+2022-11-14,Heritage,4D,SIOC,N,M,136,18,118,2.6,"NA",Y,L,ADB,NA
+2022-11-14,Heritage,4I,SIOC,N,"NA",90,18,72,3,10.3,Y,R,EGO,NA
+2022-11-14,Heritage,2H,REME,N,M,38,26,12,1.7,7.5,Y,all,EGO,NA
+2022-11-14,Heritage,4J,SIOC?,N,"NA","NA",NA,NA,NA,"NA",N,"NA",ADB,Escaped
+2022-11-14,Heritage,2F,REME,N,F,22,10,12,1.6,7.6,Y,L,ADB,NA
+2022-11-15,Heritage,4C,SIOC,R,"NA","NA",NA,NA,NA,"NA","NA","NA",ADB,NA
+2022-11-15,Heritage,4H,SIOC,N,F,95,11,84,3.3,12.4,Y,L,ADB,NA
+2022-11-15,Heritage,1H,REME,N,"NA",26,9,17,1.4,"NA",N,NA,EGO,Escaped
+2022-11-15,Heritage,1B,REME,N,F,35,9,26,1.6,7.5,Y,R,ADB,NA
+2022-11-15,Heritage,4I,SIOC,N,M,94,13,81,3.1,10.8,?,?,ADB,NA
+2022-11-15,Heritage,1G,SIOC,N,F,111,12,99,3,11.4,Y,L,EGO,NA
+2022-11-15,Heritage,1J,REME,N,"NA",33,NA,NA,1.7,6.8,N,NA,ADB,Escaped
+2022-11-15,Heritage,1E,SIOC,N,F,105,14.5,90.5,3.3,11.7,Y,L,EGO,NA
+2022-11-15,Heritage,3B,REME,N,M,30,18.5,11.5,1.6,7.9,Y,L,EGO,NA
+2022-11-15,Heritage,1I,SIOC,N,F,124,9,115,3.3,10.5,Y,L,ADB,NA
+2022-11-15,Heritage,3G,SIOC,N,F,71,24,47,2.5,8.7,N,NA,EGO,juvi
+2022-11-15,Heritage,2H,SIOC,N,"NA",57,12,45,NA,NA,N,NA,ADB,juvi
+2022-11-16,Heritage,1J,REME,N,F,32,16,NA,1.7,8.4,Y,L,EGO,NA
+2022-11-16,Heritage,1F,SIOC,R,F,"NA",NA,NA,3.5,11.2,N,L,EGO,likely recap of 1E ind. from 11/15
+2022-11-16,Heritage,1E,SIOC,N,M,93,8,85,3.4,12.1,Y,R,EGO,NA
+2022-11-16,Heritage,1H,SIOC,N,M,93,8,85,3.2,10,Y,L,EGO,NA
+2022-11-16,Heritage,1I,SIOC,N,F,82,14,68,2.7,9.6,Y,R,EGO,NA
+2022-11-16,Heritage,1D,SIOC,N,F,98,10,88,3.2,10.9,Y,R,EGO,NA
+2022-11-16,Heritage,2G,REME,N,M,33,20,13,1.8,7.6,Y,R,EGO,NA
+2022-11-16,Heritage,1C,REME,N,F,20,9,11,1.6,6.1,Y,L,EGO,NA
+2022-11-16,Heritage,4H,SIOC,N?,F,57,9,48,3,9.2,N,NA,EGO,Juvi may be same from yesterday
+2022-11-16,Heritage,3H,REME,N,M,31.5,13,NA,1.8,9.1,Y,L,EGO,NA
+2022-11-16,Heritage,4B,SIOC,N,M,>100 (300g scale with ADB),NA,NA,3.2,10.6,Y,L,EGO,NA
+2022-11-16,Heritage,4J,SIOC,R,F,87,NA,NA,NA,NA,N,L,EGO,NA
+2022-11-16,Heritage,4E,SIOC,N,M,102,9.9,92.1,3.1,10.1,Y,L,ADB,NA
+2022-11-16,Heritage,2A,SIOC,N,F,129,11.5,117.5,3.2,"NA",Y,"NA",EGO,tail short- lost part of it
+2022-11-16,Heritage,4C,SIOC,N,M,150,12.5,137.5,3.1,12.4,Y,L,EGO,NA
+2022-11-16,Heritage,4I,SIOC,N,M,140,9.5,130.5,3.4,12.1,Y,L,ADB,NA
+2022-11-16,Heritage,4D,SIOC,N,F,74,9,65,2.9,10.8,Y,L,EGO,Juvi?
+2022-11-16,Heritage,3C,SIOC,R,"NA",140,NA,NA,3.1,11.6,N,"NA",ADB,NA
+2022-11-16,Drexel,B7,CHPE,N,M,21.5,8,13.5,2.1,9.8,Y,R,ADB,NA
+2022-11-16,Drexel,B10,PEER,N,"NA",53,29.5,23.5,2.1,10.2,Y,R,ADB,NA
+2022-11-16,Drexel,D6,SIOC,N,M,118,13,105,3.4,12.6,Y,L,ADB,NA
+2022-11-17,Drexel,A3,NEAB,N,"NA",132,NA,NA,NA,"NA",N,NA,ADB,Escaped
+2022-11-17,Drexel,C2,DIME,N,F,70,35,35,3.5,15,Y,L,EGO,4 toes
+2022-11-17,Drexel,C6,DIME,N,F,50,14,NA,3.5,15,Y,L,EGO,"4 toes, forepaw sore/injured? cheek ouched ripped open? looks like old wound, released without further handling"
+2022-11-17,Drexel,C9,CHPE,R,"NA",30,NA,NA,2.2,10.8,N,NA,EGO,NA
+2022-11-17,Drexel,C10,PEER,"NA","NA",29.5,9.5,20,NA,"NA",N,NA,EGO,Escaped
+2022-11-18,Drexel,C3,DI,"NA","NA","NA",NA,NA,NA,"NA","NA","NA",ADB,Escaped!
+2022-11-18,Drexel,C5,DIME,N,F,50,12,38,3.6,~16,Y?,NA,EGO,4 toes
+2022-11-18,Drexel,C7,CHPE,R,NA,NA,NA,0,NA,NA,NA,R,EGO,NA
+2022-11-18,Drexel,C8,PEER,N,F,30,13,17,2.1,9.1,Y,R,EGO,NA
+2022-11-18,Drexel,D10,PEER,N,"NA",36,15,21,2.3,11.8,Y,L,EGO,NA
+2022-11-18,Drexel,C10,PEER,R,"NA",34,NA,NA,2,"NA",N,L,EGO,NA
+2022-11-18,Drexel,D6,DIME?,N,F,44,11.5,32.5,3.6,~15.5,Y,R,EGO,forgot to count her toes!

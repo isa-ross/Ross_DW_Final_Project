@@ -1,0 +1,81 @@
+Site,Trap Location,Distance to Vegetation (m),Type of Vegetation,Percent Veg Cover,Distance to Water (m)
+Heritage,2A,0,Bermuda grass,50,14
+Heritage,2B,0,Cheese bush,30,16
+Heritage,2C,5,Bermuda grass,0,18
+Heritage,2D,1,Salt cedar,20,19
+Heritage,2E,0,Bermuda grass,30,22
+Heritage,2F,0,Cockleburr,30,23
+Heritage,2G,0.5,Unknown grass,20,20
+Heritage,2H,0,Unknown grass,60,24
+Heritage,2I,0,Cheesebush,20,25
+Heritage,2J,0,Bermuda grass,50,21
+Heritage,1J,0,Typha,50,11
+Heritage,1I,0,Typha,80,14
+Heritage,1H,0,Typha,70,15
+Heritage,1G,0.5,Typha,50,12
+Heritage,1F,0,Smartweed/Typha mix,50,8
+Heritage,1E,0.5,Tall flatsedge / Bermuda mix,30,10
+Heritage,1D,0.25,Unknown grass,30,5
+Heritage,1C,0.5,Unknown grass,10,4
+Heritage,1B,0,Bermuda grass,40,4
+Heritage,1A,0.5,Bermuda grass,10,3
+Heritage,3A,0,Desert broom,20,23
+Heritage,3B,0,Typha,100,24
+Heritage,3C,0,Salt cedar / Typha,50,24
+Heritage,3D,0,Salt cedar / Typha,60,24
+Heritage,3E,0,Bermuda grass,50,25
+Heritage,3F,0,Arrowweed,50,30
+Heritage,3G,0,Bermuda grass,30,28
+Heritage,3H,0,Bermuda grass,90,30
+Heritage,3I,0.5,Mesquite,10,26
+Heritage,3J,0.25,Cockleburr,30,5
+Heritage,4J,0,Bermuda grass,50,17
+Heritage,4I,0,Buffelgrass,50,26
+Heritage,4H,0.5,Buffelgrass,30,32
+Heritage,4G,0,Buffelgrass,40,35
+Heritage,4F,0,Bermuda grass,50,36
+Heritage,4E,0.5,Typha,40,34
+Heritage,4D,0,Typha,60,21
+Heritage,4C,0,Typha,80,5
+Heritage,4B,0,Umbrella flatsedge,80,1
+Heritage,4A,0,Buffelgrass,80,2
+Drexel,A1,4.5,Desert broom,0,1500
+Drexel,A2,2,Unidentified grass,0,1500
+Drexel,A3,1,Desert broom,5,1500
+Drexel,A4,4.5,Desert broom,0,1500
+Drexel,A5,6,Desert broom,0,1500
+Drexel,A6,0,Salt cedar,40,1500
+Drexel,A7,0,Desert broom,60,1500
+Drexel,A8,2.5,Cheeseweed burrobush,0,1500
+Drexel,A9,5.5,Bermuda grass,0,1500
+Drexel,A10,4,Johnson grass,0,1500
+Drexel,B10,2,Desert broom,0,1500
+Drexel,B9,0.5,Buffelgrass,20,1500
+Drexel,B8,1,Cheeseweed burrobush,0,1500
+Drexel,B7,2.5,Desert broom,0,1500
+Drexel,B6,1.5,Desert broom/salt cedar,0,1500
+Drexel,B5,1.5,Unidentified Grama grass,0,1500
+Drexel,B4,2,Desert broom,0,1500
+Drexel,B3,1.5,Bermuda grass,0,1500
+Drexel,B2,2,Cockleburr,0,1500
+Drexel,B1,0,Desert broom,30,1500
+Drexel,C1,0,Cheeseweed burrobush,50,1500
+Drexel,C2,0.25,Bermuda grass,30,1500
+Drexel,C3,0,Cheeseweed burrobush/Johnson grass,15,1500
+Drexel,C4,0,Bermuda grass,40,1500
+Drexel,C5,0,Desert broom,20,1500
+Drexel,C6,0.5,Cheeseweed burrobush,5,1500
+Drexel,C7,0,Cheeseweed burrobush,30,1500
+Drexel,C8,0,Bermuda grass,60,1500
+Drexel,C9,0,Desert broom/Bermuda grass,80,1500
+Drexel,C10,0,Desert broom,70,1500
+Drexel,D1,0,"Johnson grass, bermuda grass",90,1500
+Drexel,D2,0,"Johnson grass, desert broom",50,1500
+Drexel,D3,0,Bermuda grass / Johnson grass,100,1500
+Drexel,D4,0,Johnson grass,50,1500
+Drexel,D5,0,Johnson grass / bermuda grass,50,1500
+Drexel,D6,0,Bermuda grass,40,1500
+Drexel,D7,0,Bermuda grass,40,1500
+Drexel,D8,0,Buffelgrass,80,1500
+Drexel,D9,1,Cheeseweed burrobush,0,1500
+Drexel,D10,0,Unidentified aster/Bermuda grass,30,1500

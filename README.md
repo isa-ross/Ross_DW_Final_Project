@@ -2,7 +2,9 @@
 
 ## Summary
 
-This repo contains the data and analysis for the final project for Data Wrangling. I do not yet have a data set picked out. Details on the data set will be included here when it is selected.
+This repo contains the data and analysis for the final project for Data Wrangling.
+
+The data set for this project consists of capture and vegetation data from Erin's Honors Thesis Project in 2022-23.
 
 ## Structure
 

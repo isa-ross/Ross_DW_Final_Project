@@ -1,0 +1,54 @@
+---
+title: "Final Project"
+author: "Isa Ross"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Setup
+
+Load packages and data
+
+```{r}
+library(tidyverse)
+captures <- read_csv("data_raw/capture_raw.csv")
+microsite <- read_csv("data_raw/microsite_raw.csv")
+joined_data <- read_csv("data_raw/joined_data.csv")
+microsite_grouped <- read_csv("data_raw/microsite_grouped_veg.csv")
+erin <- read_csv("data_raw/Data_forErin_R.csv") # looks like counts per genus
+```
+
+## Cleaning Data
+
+Join and standardize data sets
+
+```{r}
+# clean microsite_grouped data frame
+clean_microsite <- microsite_grouped %>% 
+  mutate(TrapID = `Trap Location`, .after = Site,
+         Dist_to_veg_m = `Distance to Vegetation (m)`,
+         Veg_type = `Type of Vegetation`,
+         Percent_veg_cover = `Percent Veg Cover`,
+         Dist_to_water_m = `Distance to Water (m)`,
+         Veg_group = Grouped_Veg) %>% 
+  select(Site, TrapID, Dist_to_veg_m, Dist_to_water_m, Veg_type, Percent_veg_cover, Veg_group)
+
+# clean captures data frame
+clean_captures <- captures %>% 
+  mutate(TrapID = `Trap ID`,
+         Status = `Status (R/N)`,
+         Total_weight_g = `Total Weight`,
+         Bag_weight_g = `Bag weight`,
+         Animal_weight_g = `Animal Weight`,
+         Hf_length_cm = `Hind foot length`,
+         Tail_length_cm = `Tail length`,
+         Hair_sample = `Hair sample (Y/N)`,
+         Position = `Position (R/L)`)
+
+# join captures and clean_microsite data frames
+inner_join(clean_captures, clean_microsite, by = "TrapID")
+```
