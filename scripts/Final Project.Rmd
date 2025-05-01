@@ -15,16 +15,23 @@ Load packages and data
 
 ```{r}
 library(tidyverse)
-captures <- read_csv("data_raw/capture_raw.csv")
-microsite <- read_csv("data_raw/microsite_raw.csv")
-joined_data <- read_csv("data_raw/joined_data.csv")
-microsite_grouped <- read_csv("data_raw/microsite_grouped_veg.csv")
-erin <- read_csv("data_raw/Data_forErin_R.csv") # looks like counts per genus
+raw_data <- read_csv("../data_raw/all.data.final.csv")
 ```
 
 ## Cleaning Data
 
 Join and standardize data sets
+
+```{r}
+raw_data %>% 
+  select()
+  mutate(country = CountryName.x,
+         site = sitecode,
+         )
+
+
+filter(raw_data, CountryName.x == "Rwanda")
+```
 
 ```{r}
 # clean microsite_grouped data frame
