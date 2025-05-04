@@ -38,6 +38,7 @@ select_data <- raw_data %>%  #week3
 
 ```{r}
 # categorize each site by size
+# weeks 12 & 13
 
 area.size <- vector("character", length = nrow(select_data))
 
@@ -55,5 +56,16 @@ for (i in 1:nrow(select_data)) {
      area.size[i] <- "huge"
    } 
   select_data$area.size <- area.size
-  }
+}
+
+# write function to determine poaching by area
+
+poach_per_km <- function(dataframe) {
+  dataframe$poach_density <- dataframe$num.poach / dataframe$site.area
+  return(dataframe)
+}
+
+select_data <- poach_per_km(select_data)
+
+max(select_data$poach_density)
 ```
