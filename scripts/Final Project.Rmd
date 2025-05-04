@@ -32,24 +32,28 @@ select_data <- raw_data %>%  #week3
          perc.dead.poach = num.poach/all.carcass,
          year = yr,
          perc.pop.poach = num.poach/ele.pop) %>% 
-  select(country, site, year, all.carcass, num.poach, perc.dead.poach, perc.pop.poach, ele.pop, ele.density, ivory.price) %>% 
+  select(country, site, site.area, year, all.carcass, num.poach, perc.dead.poach, perc.pop.poach, ele.pop, ele.density, ivory.price) %>% 
   drop_na(ivory.price) #week6
 ```
 
-.poach)
-
 ```{r}
-# group data by country
-select_data %>% 
-  arrange(perc.pop.poach)
+# categorize each site by size
 
-select_data$risk <- vector("character", length = nrow(select_data))
+area.size <- vector("character", length = nrow(select_data))
 
 for (i in 1:nrow(select_data)) {
-    if (select_data$num.poach[i] == 0){
-      select_data$risk == "none"
-    } else if (select_data$num.poach[i] > 0) {
-      select_data$risk == "true"
-    }
+  site.area <- select_data$site.area[i] 
+   if (site.area <= 10000) {
+     area.size[i] <- "tiny"
+   } else if (site.area <= 20000) {
+     area.size[i] <- "small"
+   } else if (site.area <= 30000) {
+     area.size[i] <- "medium"
+   } else if (site.area <= 40000) {
+     area.size[i] <- "large"
+   } else {
+     area.size[i] <- "huge"
+   } 
+  select_data$area.size <- area.size
   }
 ```
