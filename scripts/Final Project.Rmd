@@ -23,39 +23,33 @@ raw_data <- read_csv("../data_raw/all.data.final.csv")
 Rename and select columns of interest
 
 ```{r}
-select_data <- raw_data %>% 
-    mutate(country = CountryName.x,
+select_data <- raw_data %>%  #week3
+    mutate(country = CountryName.x, #week6
          site = sitecode,
          ivory.price = ivory.price.toan,
-         num.poached = illegal,
+         num.poach = illegal,
          all.carcass = totcarc,
-         perc.poached = num.poached/all.carcass) %>% 
-  select(country, site, all.carcass, num.poached, perc.poached, ele.pop, ele.density, ivory.price)
+         perc.dead.poach = num.poach/all.carcass,
+         year = yr,
+         perc.pop.poach = num.poach/ele.pop) %>% 
+  select(country, site, year, all.carcass, num.poach, perc.dead.poach, perc.pop.poach, ele.pop, ele.density, ivory.price) %>% 
+  drop_na(ivory.price) #week6
 ```
 
+.poach)
+
 ```{r}
-# clean microsite_grouped data frame
-clean_microsite <- microsite_grouped %>% 
-  mutate(TrapID = `Trap Location`, .after = Site,
-         Dist_to_veg_m = `Distance to Vegetation (m)`,
-         Veg_type = `Type of Vegetation`,
-         Percent_veg_cover = `Percent Veg Cover`,
-         Dist_to_water_m = `Distance to Water (m)`,
-         Veg_group = Grouped_Veg) %>% 
-  select(Site, TrapID, Dist_to_veg_m, Dist_to_water_m, Veg_type, Percent_veg_cover, Veg_group)
+# group data by country
+select_data %>% 
+  arrange(perc.pop.poach)
 
-# clean captures data frame
-clean_captures <- captures %>% 
-  mutate(TrapID = `Trap ID`,
-         Status = `Status (R/N)`,
-         Total_weight_g = `Total Weight`,
-         Bag_weight_g = `Bag weight`,
-         Animal_weight_g = `Animal Weight`,
-         Hf_length_cm = `Hind foot length`,
-         Tail_length_cm = `Tail length`,
-         Hair_sample = `Hair sample (Y/N)`,
-         Position = `Position (R/L)`)
+select_data$risk <- vector("character", length = nrow(select_data))
 
-# join captures and clean_microsite data frames
-inner_join(clean_captures, clean_microsite, by = "TrapID")
+for (i in 1:nrow(select_data)) {
+    if (select_data$num.poach[i] == 0){
+      select_data$risk == "none"
+    } else if (select_data$num.poach[i] > 0) {
+      select_data$risk == "true"
+    }
+  }
 ```
