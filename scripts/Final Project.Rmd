@@ -20,17 +20,17 @@ raw_data <- read_csv("../data_raw/all.data.final.csv")
 
 ## Cleaning Data
 
-Join and standardize data sets
+Rename and select columns of interest
 
 ```{r}
-raw_data %>% 
-  select()
-  mutate(country = CountryName.x,
+select_data <- raw_data %>% 
+    mutate(country = CountryName.x,
          site = sitecode,
-         )
-
-
-filter(raw_data, CountryName.x == "Rwanda")
+         ivory.price = ivory.price.toan,
+         num.poached = illegal,
+         all.carcass = totcarc,
+         perc.poached = num.poached/all.carcass) %>% 
+  select(country, site, all.carcass, num.poached, perc.poached, ele.pop, ele.density, ivory.price)
 ```
 
 ```{r}
