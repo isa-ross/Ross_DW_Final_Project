@@ -29,7 +29,7 @@ select_data <- raw_data %>%  #week3
          ivory.price = ivory.price.toan,
          num.poach = illegal,
          all.carcass = totcarc,
-         perc.dead.poach = num.poach/all.carcass,
+         perc.dead.poach = num.poach/all.carcass, #week2
          year = yr,
          perc.pop.poach = num.poach/ele.pop) %>% 
   select(country, site, site.area, year, all.carcass, num.poach, perc.dead.poach, perc.pop.poach, ele.pop, ele.density, ivory.price) %>% 
@@ -59,6 +59,7 @@ for (i in 1:nrow(select_data)) {
 }
 
 # write function to determine poaching by area
+# in progress - not sure of purpose/if I'll keep it
 
 poach_per_km <- function(dataframe) {
   dataframe$poach_density <- dataframe$num.poach / dataframe$site.area
