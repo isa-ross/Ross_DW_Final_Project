@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Load packages and data
 
 ```{r}
+
 library(tidyverse)
 raw_data <- read_csv("../data_raw/all.data.final.csv")
 ```
@@ -23,17 +24,24 @@ raw_data <- read_csv("../data_raw/all.data.final.csv")
 Rename and select columns of interest
 
 ```{r}
-select_data <- raw_data %>%  #week3
+#REVIEW: I like how you use simple names when creating new objects.
+select_data <- raw_data %>%  #week3 #REVIEW: I will save select_data in a clean_data folder
     mutate(country = CountryName.x, #week6
          site = sitecode,
-         ivory.price = ivory.price.toan,
+         ivory.price = ivory.price.toan, 
          num.poach = illegal,
          all.carcass = totcarc,
          perc.dead.poach = num.poach/all.carcass, #week2
          year = yr,
          perc.pop.poach = num.poach/ele.pop) %>% 
   select(country, site, site.area, year, all.carcass, num.poach, perc.dead.poach, perc.pop.poach, ele.pop, ele.density, ivory.price) %>% 
-  drop_na(ivory.price) #week6
+  drop_na(ivory.price)#week6
+#REVIEW: I would change the columns names to separate words
+# with _ instead of . 
+# I believe people is more use to see columns name like: "ivory_price"
+# than "ivory.price". Not a single problem with how you did it though. 
+# REVIEW: A plot to visually demonstrate which areas had more poaching
+# can help to undertstand the data a little bit better :). 
 ```
 
 ```{r}
@@ -42,8 +50,14 @@ select_data <- raw_data %>%  #week3
 
 area.size <- vector("character", length = nrow(select_data))
 
+#REVIEW: A brief comment on which scale are you using to determine 
+# between "tiny', "small", "medium", "large", or "huge" 
+# sqkm?, sqft? 
 for (i in 1:nrow(select_data)) {
-  site.area <- select_data$site.area[i] 
+  site.area <- select_data$site.area[i] #REVIEW: writing a function also could
+  # a similar outcome. Say that you wanna know if "x" site is considered small
+  # you can create a function, and input the site name, and that will give 
+  # the category as the result. 
    if (site.area <= 10000) {
      area.size[i] <- "tiny"
    } else if (site.area <= 20000) {
@@ -57,10 +71,13 @@ for (i in 1:nrow(select_data)) {
    } 
   select_data$area.size <- area.size
 }
-
+#REVIEW: Here I would add an else argument to specify if the site.area doesn't fit in any given clasification, example could be if an area is too large to large to be considered huge, you could give a message like "study area is not considered in this analysis". 
 # write function to determine poaching by area
 # in progress - not sure of purpose/if I'll keep it
-
+#REVIEW: I will keep it, first because you cover another week with it, 
+# and second, it could be useful to have this function running to
+# be able to have a quick result on areas where more enforcement could be
+# use. 
 poach_per_km <- function(dataframe) {
   dataframe$poach_density <- dataframe$num.poach / dataframe$site.area
   return(dataframe)
