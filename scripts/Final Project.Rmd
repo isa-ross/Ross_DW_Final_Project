@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Setup
 
-Load packages and data
+Load packages and raw elephant data
 
 ```{r}
 library(tidyverse)
@@ -35,6 +35,8 @@ select_data <- raw_data %>%  #week3
   select(country, site, site.area, year, all.carcass, num.poach, perc.dead.poach, perc.pop.poach, ele.pop, ele.density, ivory.price) %>% 
   drop_na(ivory.price) #week6
 ```
+
+Categorize each site by size.
 
 ```{r}
 # categorize each site by size
@@ -60,13 +62,52 @@ for (i in 1:nrow(select_data)) {
 
 # write function to determine poaching by area
 # in progress - not sure of purpose/if I'll keep it
+# week 11
 
 poach_per_km <- function(dataframe) {
-  dataframe$poach_density <- dataframe$num.poach / dataframe$site.area
+  dataframe$poach.density <- dataframe$num.poach / dataframe$site.area
   return(dataframe)
 }
 
 select_data <- poach_per_km(select_data)
 
-max(select_data$poach_density)
+max(select_data$poach.density)
+
+# classify poaching level by poach_per_km
+range(select_data$poach_density)
+max(select_data$poach_density)/5
+min(select_data$poach_density)
+
+select_data$poach.density<=0.05
+
+poach.level <- vector("character", length = nrow(select_data))
+
+for (i in 1:nrow(select_data)) {
+  poach.level <- select_data$poach.density[i] 
+   if (poach.density <= 0.005) {
+     poach.level[i] <- "miniscule"
+   } else if (poach.density <= 0.01) {
+     poach.level[i] <- "low"
+   } else if (poach.density <= 0.015) {
+     poach.level[i] <- "medium"
+   } else if (poach.density <= 0.02) {
+     poach.level[i] <- "high"
+   } else {
+     poach.level[i] <- "extreme"
+   } 
+  select_data$poach.level <- poach.level
+}
+```
+
+Look through year data
+
+```{r}
+select_data$year %>% 
+  range()
+
+plot(select_data$year, select_data$perc.dead.poach)
+
+str_detect(select_data$year, pattern = "2002")
+
+filter(select_data$year = 2002)
 ```
