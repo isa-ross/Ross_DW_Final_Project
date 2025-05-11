@@ -1,6 +1,6 @@
 ---
 title: 'Peer Code Review: Checklist and Reflection'
-author: "Ellen Bledsoe"
+author: "Isa Ross"
 date: "`r Sys.Date()`"
 output: pdf_document
 ---
