@@ -1,0 +1,101 @@
+---
+title: 'Peer Code Review: Checklist and Reflection'
+author: "Ellen Bledsoe"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Checklist and Reflection (20 points)
+
+In this .Rmd file, you will find (a) the checklist to complete for the peer code review and (b) a short reflection about the experience.
+
+Once both are completed, knit this document and submit to the Peer Code Review Assignment on D2L.
+
+### GitHub Repo
+
+Whose repo did you review? Include the link to the repo here.
+
+Name: Caleb Miller
+
+Link to Repo: <https://github.com/WFSC-DataWrangling-Sp25/MillerFinalProject.git>
+
+## Checklist
+
+Complete the checklist, where appropriate, based on your review. If you are in visual mode, you can actually "check" the boxes by clicking on them. If you are working in source mode, you will put an `x` inside the square brackets next to each item.
+
+Since you are reviewing a "Work in Progress" project, not all boxed might be checked; that's ok! That will not impact anyone's grade :)
+
+### Repository Setup
+
+-   [x] I accessed and cloned the repository.
+-   [x] A README is present.
+    -   [x] README explains project purpose.
+    -   [ ] README includes reproduction instructions.
+
+### Code Clarity & Readability
+
+-   [x] Variable names are descriptive.
+-   [x] Code is logically structured.
+-   [x] Helpful comments are included.
+-   [x] Code is generally readable.
+
+**Notes / Comments:**\
+\> Comments may be a bit excessive, and code chunks include experimental or messy code, which is explained as draft code, but is probably unnecessary.
+
+### Functionality
+
+-   [ ] Code runs without errors.
+-   [x] Outputs match expectations or are explained.
+-   [x] All file paths are relative.
+
+**Notes / Comments:**\
+\> Some code chunks do not work as expected, but are then explained as intentionally erroneous and then corrected. The erroneous code is probably unnecessary; only including clean, final code will help reproducibility and clarity.
+
+### Code Organization
+
+-   [x] Files and folders are logically structured.
+-   [x] Workflow is understandable and modular.
+-   [x] Reproducibility is supported.
+
+**Notes / Comments:**\
+\> For the sake of reproducibility, I recommend removing draft code.
+
+### Documentation
+
+-   [ ] README is complete and clear.
+-   [x] RMarkdown file or R scripts include informative text and/or comments.
+-   [x] Data or package requirements are documented.
+
+**Notes / Comments:**\
+\> README should include reproduction instructions, though there are substantial comments explaining packages and code within the markdown file.
+
+### Suggestions for Improvement
+
+List **three** actionable suggestions:
+
+1.  Make comments in the markdown file more concise
+
+2.  Remove draft/erroneous code; only include the final version
+
+3.  Include instructions for reproduction in the README, not just in the markdown file
+
+## Reflection
+
+Write 7-10 sentences summarizing your review experience:
+
+-   What was done well?
+-   What was challenging about this assignment?
+-   What did you learn for your own projects?
+-   How did you approach constructive feedback?
+
+**Reflection**:
+
+The comments within the markdown file were remarkably detailed and thoroughly explained the process of coding the project, which would be very useful for reproducing the project. Making note of what worked well before leaving any criticisms helped feedback be constructive and supportive. I also try to frame my feedback around things that I noticed or recommendations that I might use, so that the comments feel less targeted or negative. The actual process of leaving comments was fairly easy for me; the most challenging parts of this review regarded differences in coding style and project purpose. There were several aspects of the project that I had to clarify with Dr. Bledsoe because it seemed that Caleb and I had interpreted the instructions for the project a bit differently, which made it a bit challenging to leave feedback before getting clarification. Additionally, because this project is still in progress, there were spots where I left some comments that may not actually be useful depending on what direction Caleb continues with the project. However, this review gave me several ideas for my own project. For example, I really liked the descriptiveness of Caleb's comments within his markdown file, and I plan to mimic some of the descriptions in my own code. Additionally, Caleb has some really great ways of streamlining some of his code with functions and loops, which I think would be useful in my projects as well.
+
+## Submission
+
+Upload the knitted `.pdf` file to the "Peer Code Review" Assignment on D2L.
