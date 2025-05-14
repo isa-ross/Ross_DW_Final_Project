@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Setup
 
-Load packages and data
+Load packages and raw elephant data
 
 ```{r}
 
@@ -44,6 +44,8 @@ select_data <- raw_data %>%  #week3 #REVIEW: I will save select_data in a clean_
 # can help to undertstand the data a little bit better :). 
 ```
 
+Categorize each site by size.
+
 ```{r}
 # categorize each site by size
 # weeks 12 & 13
@@ -74,16 +76,58 @@ for (i in 1:nrow(select_data)) {
 #REVIEW: Here I would add an else argument to specify if the site.area doesn't fit in any given clasification, example could be if an area is too large to large to be considered huge, you could give a message like "study area is not considered in this analysis". 
 # write function to determine poaching by area
 # in progress - not sure of purpose/if I'll keep it
+
 #REVIEW: I will keep it, first because you cover another week with it, 
 # and second, it could be useful to have this function running to
 # be able to have a quick result on areas where more enforcement could be
 # use. 
+=======
+# week 11
+
 poach_per_km <- function(dataframe) {
-  dataframe$poach_density <- dataframe$num.poach / dataframe$site.area
+  dataframe$poach.density <- dataframe$num.poach / dataframe$site.area
   return(dataframe)
 }
 
 select_data <- poach_per_km(select_data)
 
-max(select_data$poach_density)
+max(select_data$poach.density)
+
+# classify poaching level by poach_per_km
+range(select_data$poach_density)
+max(select_data$poach_density)/5
+min(select_data$poach_density)
+
+select_data$poach.density<=0.05
+
+poach.level <- vector("character", length = nrow(select_data))
+
+for (i in 1:nrow(select_data)) {
+  poach.level <- select_data$poach.density[i] 
+   if (poach.density <= 0.005) {
+     poach.level[i] <- "miniscule"
+   } else if (poach.density <= 0.01) {
+     poach.level[i] <- "low"
+   } else if (poach.density <= 0.015) {
+     poach.level[i] <- "medium"
+   } else if (poach.density <= 0.02) {
+     poach.level[i] <- "high"
+   } else {
+     poach.level[i] <- "extreme"
+   } 
+  select_data$poach.level <- poach.level
+}
+```
+
+Look through year data
+
+```{r}
+select_data$year %>% 
+  range()
+
+plot(select_data$year, select_data$perc.dead.poach)
+
+str_detect(select_data$year, pattern = "2002")
+
+filter(select_data$year = 2002)
 ```
