@@ -6,6 +6,8 @@ This repo contains the data and analysis for the final project for Data Wranglin
 
 The data set for this project consists of elephant population and death statistics in Africa, along with environmental and social conditions that may be explanatory variables. The main variable of interest in the number of poached elephants at each site.
 
+The goal of this project is to categorize sites by size and poaching intensity, and compare them by country.
+
 ## Structure
 
 Sub-directories are:
@@ -28,23 +30,25 @@ Sub-directories are:
 
 ## Week Content
 
+Week 2: Intro to R (Simple math)
+
+Week 3: Data Tables
+
+Week 5: Data Vis
+
+Week 6: Tidy data (mutate)
+
 Week 8: RMarkdown
 
 Week 9: RStudio Project
 
 Week 10: GitHub Repo
 
-Week 5: Data Vis
+Week 11: Functions
 
 Week 12: if/else
 
 Week 13: for loops
-
-Week 6: Tidy data (mutate)
-
-Week 2: Intro to R (Simple math)
-
-Week 3: Data Tables
 
 ## Column names
 
@@ -54,7 +58,7 @@ income = Household Income
 
 edu = Household Education (subnational HDI)
 
-area = Area of Site
+area = Area of Site (sqkm)
 
 travel = Travel Time to Site
 
