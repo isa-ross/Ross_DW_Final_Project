@@ -438,7 +438,9 @@ poach_per_km &lt;- function(dataframe) {
 select_data &lt;- poach_per_km(select_data)
 
 # classify poaching level by poach_per_km
+
 # explore poach.density range
+
 range(select_data$poach.density)</code></pre>
 <pre><code>## [1] 0.00000000 0.03098913</code></pre>
 <pre class="r"><code>max(select_data$poach.density)/5</code></pre>
@@ -484,23 +486,7 @@ range(select_data$poach.density)</code></pre>
 ## [526] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
 ## [541] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
 ## [556] TRUE</code></pre>
-<pre class="r"><code># poach.level &lt;- vector(&quot;character&quot;, length = nrow(select_data))
-# 
-# for (i in 1:nrow(select_data)) {
-#   poach.level &lt;- select_data$poach.density[i] 
-#    if (select_data$poach.density[i] &lt;= 0.005) {
-#      poach.level[i] &lt;- &quot;miniscule&quot;
-#    } else if (select_data$poach.density[i] &lt;= 0.01) {
-#      poach.level[i] &lt;- &quot;low&quot;
-#    } else if (select_data$poach.density[i] &lt;= 0.015) {
-#      poach.level[i] &lt;- &quot;medium&quot;
-#    } else if (select_data$poach.density[i] &lt;= 0.02) {
-#      poach.level[i] &lt;- &quot;high&quot;
-#    } else {
-#      poach.level[i] &lt;- &quot;extreme&quot;
-#    } 
-#   select_data$poach.level &lt;- poach.level
-# }
+<pre class="r"><code>poach.level &lt;- vector(&quot;character&quot;, length = nrow(select_data))
 
 select_data &lt;- select_data %&gt;% 
   mutate(poach.level = case_when(
@@ -510,13 +496,20 @@ select_data &lt;- select_data %&gt;%
     poach.density &lt;= 0.02 ~ &quot;high&quot;,
     TRUE ~ &quot;extreme&quot;
   ))</code></pre>
-<p>Calculate mean poaching per km in each year</p>
-<pre class="r"><code>annual_means &lt;- select_data %&gt;% 
+<p>Calculate and visualize mean poaching per km in each year</p>
+<pre class="r"><code># create a data frame with the mean poaching density for each year
+
+annual_means &lt;- select_data %&gt;% 
   group_by(year) %&gt;% 
   summarize(annual.mean.poach = mean(poach.density, na.rm = TRUE))
 
+# join mean data into main data frame
+# week 4
+
 select_data &lt;- select_data %&gt;% 
   left_join(annual_means, by = &quot;year&quot;)
+
+# plot annual mean poaching by year
 
 plot(select_data$year, select_data$annual.mean.poach,
      xlab = &quot;Year&quot;, ylab = &quot;Annual mean poach per km&quot;, 
@@ -525,12 +518,18 @@ plot(select_data$year, select_data$annual.mean.poach,
 <pre class="r"><code>ggsave(&quot;Annual_poach_by_year.png&quot;, path = &quot;../outputs/&quot;)</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
 <p>Sort poach density by country</p>
-<pre class="r"><code>poach_by_country &lt;- select_data %&gt;% 
+<pre class="r"><code># create a data frame with the mean poaching density for each country
+
+poach_by_country &lt;- select_data %&gt;% 
   group_by(country) %&gt;% 
   summarize(mean.poach.country = mean(poach.density, na.rm = TRUE))
 
+# join into main data frame
+
 select_data &lt;- select_data %&gt;% 
   left_join(poach_by_country, by = &quot;country&quot;)
+
+# plot mean poaching by country
 
 select_data %&gt;% ggplot(aes(x = country, y = mean.poach.country)) +
   geom_point(color = &quot;purple&quot;, size = 3)+

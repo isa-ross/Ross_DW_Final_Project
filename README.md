@@ -28,11 +28,13 @@ Sub-directories are:
 
     -   code and documents
 
-## Week Content
+## Week Content Used
 
 Week 2: Intro to R (Simple math)
 
 Week 3: Data Tables
+
+Week 4: Groups and Joins
 
 Week 5: Data Vis
 

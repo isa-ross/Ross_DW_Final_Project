@@ -73,7 +73,9 @@ poach_per_km <- function(dataframe) {
 select_data <- poach_per_km(select_data)
 
 # classify poaching level by poach_per_km
+
 # explore poach.density range
+
 range(select_data$poach.density)
 max(select_data$poach.density)/5
 min(select_data$poach.density)
@@ -81,22 +83,6 @@ min(select_data$poach.density)
 select_data$poach.density<=0.05
 
 poach.level <- vector("character", length = nrow(select_data))
-
-for (i in 1:nrow(select_data)) {
-  poach.level <- select_data$poach.density[i]
-   if (select_data$poach.density[i] <= 0.005) {
-     poach.level[i] <- "miniscule"
-   } else if (select_data$poach.density[i] <= 0.01) {
-     poach.level[i] <- "low"
-   } else if (select_data$poach.density[i] <= 0.015) {
-     poach.level[i] <- "medium"
-   } else if (select_data$poach.density[i] <= 0.02) {
-     poach.level[i] <- "high"
-   } else {
-     poach.level[i] <- "extreme"
-   }
-  select_data$poach.level <- poach.level
-}
 
 select_data <- select_data %>% 
   mutate(poach.level = case_when(
@@ -108,15 +94,22 @@ select_data <- select_data %>%
   ))
 ```
 
-Calculate mean poaching per km in each year
+Calculate and visualize mean poaching per km in each year
 
 ```{r}
+# create a data frame with the mean poaching density for each year
+
 annual_means <- select_data %>% 
   group_by(year) %>% 
   summarize(annual.mean.poach = mean(poach.density, na.rm = TRUE))
 
+# join mean data into main data frame
+# week 4
+
 select_data <- select_data %>% 
   left_join(annual_means, by = "year")
+
+# plot annual mean poaching by year
 
 plot(select_data$year, select_data$annual.mean.poach,
      xlab = "Year", ylab = "Annual mean poach per km", 
@@ -128,12 +121,18 @@ ggsave("Annual_poach_by_year.png", path = "../outputs/")
 Sort poach density by country
 
 ```{r}
+# create a data frame with the mean poaching density for each country
+
 poach_by_country <- select_data %>% 
   group_by(country) %>% 
   summarize(mean.poach.country = mean(poach.density, na.rm = TRUE))
 
+# join into main data frame
+
 select_data <- select_data %>% 
   left_join(poach_by_country, by = "country")
+
+# plot mean poaching by country
 
 select_data %>% ggplot(aes(x = country, y = mean.poach.country)) +
   geom_point(color = "purple", size = 3)+
